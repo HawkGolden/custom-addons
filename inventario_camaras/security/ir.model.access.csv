@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_inventario_camara,access_inventario_camara,model_inventario_camara,,1,1,1,1
+access_inventario_dvr,access_inventario_dvr,model_inventario_dvr,,1,1,1,1

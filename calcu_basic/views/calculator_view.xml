@@ -1,0 +1,28 @@
+<odoo>
+    <record id="view_calculator_form" model="ir.ui.view">
+        <field name="name">calcu_basic.operation.form</field>
+        <field name="model">calcu_basic.operation</field>
+        <field name="arch" type="xml">
+            <form string="Calculadora Básica">
+                <group>
+                    <field name="operation_type"/>
+                    <field name="operand1"/>
+                    <field name="operand2"/>
+                    <field name="result" readonly="1"/>
+                </group>
+                <footer>
+                    <button string="Calcular" type="object" name="calculate_result"/>
+                    <button string="Cancelar" type="object" name="cancel_operation"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_calculator_operations" model="ir.actions.act_window">
+        <field name="name">Operaciones de calculadora</field>
+        <field name="res_model">calcu_basic.operation</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+    </record>
+    <menuitem id="menu_calculator_root" name="Calculadora"/>
+    <menuitem id="menu_calculator_operations" name="Operaciones" parent="menu_calculator_root" action="action_calculator_operations"/>
+</odoo>

@@ -1,0 +1,50 @@
+Estoy programando con odoo 17, aun solo tengo nociones basicas,
+aunque ya tengo la configuracion de entorno hecha y funcionando,
+listo para comenzar a crear modulos con base a los requerimientos,
+te mando la estructura del proyecto base antes de mandarte instrucciones
+
+Por ahora, nos vamos a enfocar en funcionalidad (vista y modelo) y no en controlador
+"
+
+inventario_camaras/
+│
+├── controllers/
+│   ├── __init__.py
+│   └── controllers.py
+│
+├── demo/
+│   └── demo.xml
+│
+├── models/
+│   ├── models.py
+│   ├── __init__.py
+│
+├── security/
+│   └── ir.model.access.csv
+│
+├── views/
+│   └── templates.xml
+│   └── views.xml
+│
+├── __init__.py
+├── __manifest__.py
+├── __pycache__/
+
+
+"
+
+ La idea detras de este modulo son varias cosas,
+ debes presentarme una guia detallada, que tan factible es el proyecto
+ y como lo puedo desarrollar de una manera rapida sin complicarme demasiado,
+ tiene dos partes, debo poder agregar planos, (una o dos imagenes png o jpg)
+ no demasiado avanzados, tal vez la camara tenga un codigo qr, adicional de este plano, o tal vez
+ este tenga su plano por un archivo de autocat o un formato mas raro como .sh3d, es decir
+ necesito que cada camara me permita agreagar por lo menos 10Mb de archivos en el formato que yo desee,
+ no se que tan factible sea esto,
+ en el inventario de camaras, suponiendo que tengo 32 camaras,
+ seria una lista de 32 en inventario, en el inventario me guarda el serial de la camara,
+ la referencia, marca,  observaciones (o descripcion de cada camara) (cualquier otro campo crucial que se me pueda olvidar)
+estas vistas asi como el inventario se acceden desde la vista principal el cual es
+una lista que contiene el nombre del lugar (lo puedo agregar desde el menu) y el tipo de dvr
+que se añade de la misma manera (yo lo agrego) de este modo podre tener mas de 1 dvr y cada
+uno me va a listar en el inventario las camaras que tiene conectadas asi como sus especificaciones

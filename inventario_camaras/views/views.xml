@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vistas para Cámaras -->
+    <record id="view_form_camara" model="ir.ui.view">
+        <field name="name">inventario.camara.form</field>
+        <field name="model">inventario.camara</field>
+        <field name="arch" type="xml">
+            <form string="Cámara">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="serial"/>
+                        <field name="referencia"/>
+                        <field name="marca"/>
+                        <field name="descripcion"/>
+                        <field name="archivos" filename="archivos_nombre"/>
+                        <field name="dvr_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_camara" model="ir.ui.view">
+        <field name="name">inventario.camara.tree</field>
+        <field name="model">inventario.camara</field>
+        <field name="arch" type="xml">
+            <tree string="Cámaras">
+                <field name="name"/>
+                <field name="serial"/>
+                <field name="marca"/>
+                <field name="dvr_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Acción de Cámaras -->
+    <record id="action_camaras" model="ir.actions.act_window">
+        <field name="name">Cámaras</field>
+        <field name="res_model">inventario.camara</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Vistas para DVRs -->
+    <record id="view_form_dvr" model="ir.ui.view">
+        <field name="name">inventario.dvr.form</field>
+        <field name="model">inventario.dvr</field>
+        <field name="arch" type="xml">
+            <form string="DVR">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="ubicacion"/>
+                        <field name="camaras_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_dvr" model="ir.ui.view">
+        <field name="name">inventario.dvr.tree</field>
+        <field name="model">inventario.dvr</field>
+        <field name="arch" type="xml">
+            <tree string="DVRs">
+                <field name="name"/>
+                <field name="ubicacion"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Acción de DVRs -->
+    <record id="action_dvrs" model="ir.actions.act_window">
+        <field name="name">DVRs</field>
+        <field name="res_model">inventario.dvr</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menú de Inventario -->
+    <menuitem id="menu_inventario_root" name="Inventario" sequence="1"/>
+
+    <!-- Menú para Cámaras, que referencia la acción de cámaras -->
+    <menuitem id="menu_camaras" name="Cámaras" parent="menu_inventario_root" action="action_camaras"/>
+
+    <!-- Menú para DVRs, que referencia la acción de DVRs -->
+    <menuitem id="menu_dvrs" name="DVRs" parent="menu_inventario_root" action="action_dvrs"/>
+
+    <!-- Comentarios importantes: -->
+    <!-- 1. Las acciones (action_camaras, action_dvrs) deben estar definidas antes de los menús (menuitem),
+         ya que los menús hacen referencia a ellas. -->
+    <!-- 2. Siempre verifica que las vistas y los modelos asociados estén bien definidos para evitar errores. -->
+</odoo>
