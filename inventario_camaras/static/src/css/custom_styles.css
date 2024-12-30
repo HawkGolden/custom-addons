@@ -1,260 +1,138 @@
-/* Fondo de la página */
-body {
-    background-color: #f4f6f9; /* Fondo suave */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+/* Personalización del módulo de Inventario de Cámaras */
 
-/* Encabezado de las vistas */
-h1, h2, h3 {
-    color: #4A90E2;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-/* Fondo de las tarjetas de formularios */
-.form-container {
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para las tarjetas */
-    padding: 20px;
+/* Estilos para las vistas de formularios (Cámara y DVR) */
+.o_form_sheet {
+    background-color: #f9f9f9; /* Fondo gris claro */
     border-radius: 8px;
-    margin: 15px 0;
+    padding: 20px;
 }
 
-/* Estilo de las etiquetas */
-label {
-    color: #333;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-/* Estilo de los campos de texto */
-input[type="text"],
-input[type="password"],
-input[type="email"],
-textarea,
-select {
-    width: 100%;
-    padding: 10px;
+.o_form_sheet .o_notebook {
     border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 14px;
-    transition: border-color 0.3s ease;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-/* Efecto de enfoque en los campos de texto */
-input:focus, textarea:focus, select:focus {
-    border-color: #4A90E2;
-    outline: none;
+/* Personalización de las páginas dentro del notebook */
+.o_notebook .o_notebook_page {
+    padding: 20px;
+    background-color: #ffffff;
 }
 
-/* Estilo para botones */
-button, .btn {
-    background-color: #4A90E2; /* Azul vibrante */
+/* Títulos de las páginas en el notebook */
+.o_notebook .o_notebook_header {
+    background-color: #4CAF50;
     color: white;
     font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Estilo de los botones */
+.o_form_button_box .btn-primary {
+    background-color: #4CAF50; /* Verde brillante */
+    border-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
     padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
-/* Efecto hover en los botones */
-button:hover, .btn:hover {
-    background-color: #357ABD;
+.o_form_button_box .btn-primary:hover {
+    background-color: #45a049; /* Hover más oscuro */
 }
 
-/* Estilo para las tablas */
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.table th, .table td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.table th {
-    background-color: #4A90E2;
-    color: white;
-}
-
-.table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* Estilo para las filas al pasar el mouse */
-.table tbody tr:hover {
-    background-color: #f1f1f1;
-}
-
-/* Estilo para la barra lateral */
-.sidebar {
-    background-color: #2c3e50;
-    color: white;
-    padding: 15px;
-    border-radius: 6px;
-}
-
-/* Estilo para los elementos de la lista en la barra lateral */
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    padding: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.sidebar ul li:hover {
-    background-color: #34495e;
-}
-
-/* Estilo para los íconos en la barra lateral */
-.sidebar ul li i {
-    margin-right: 10px;
-}
-
-/* Agregar un contorno y sombra sutil en los cuadros de texto */
-.input-box {
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Agregar un estilo de tarjeta a cada ítem */
-.card {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 15px;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-}
-
-/* Títulos de las tarjetas */
-.card h4 {
+.o_form_button_box .btn-secondary {
+    background-color: #f1f1f1; /* Gris claro para botón secundario */
+    border-color: #ccc;
     color: #333;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-/* Estilo para las alertas de mensaje */
-.alert {
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    font-size: 16px;
-}
-
-.alert-success {
-    background-color: #28a745;
-    color: white;
-}
-
-.alert-error {
-    background-color: #dc3545;
-    color: white;
-}
-
-/* Estilo para el pie de página */
-footer {
-    background-color: #34495e;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Estilo para las barras de carga */
-.progress-bar {
-    height: 20px;
-    background-color: #4A90E2;
-    border-radius: 4px;
-    width: 0%;
-    transition: width 0.4s ease;
-}
-
-/* Contenedor de la vista de las cámaras */
-.camera-view-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-/* Cada tarjeta de cámara */
-.camera-card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: calc(33.333% - 20px);
-    padding: 15px;
-    text-align: center;
-}
-
-/* Estilo de la imagen de la cámara */
-.camera-card img {
-    width: 100%;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-/* Estilo para el nombre y detalles de la cámara */
-.camera-card h4 {
-    color: #333;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.camera-card .details {
-    color: #777;
-    font-size: 14px;
-}
-
-/* Estilo para los botones dentro de la tarjeta de la cámara */
-.camera-card .btn {
-    background-color: #357ABD;
-    padding: 10px 15px;
     border-radius: 5px;
-    color: white;
+    padding: 10px 20px;
     font-size: 14px;
-    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.camera-card .btn:hover {
-    background-color: #2980b9;
+.o_form_button_box .btn-secondary:hover {
+    background-color: #e0e0e0; /* Hover más claro */
 }
 
-/* Fondo alterno de la vista de cámaras */
-.camera-card:nth-child(even) {
+/* Estilos para los campos del formulario */
+.o_field_widget input,
+.o_field_widget select,
+.o_field_widget textarea {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.o_field_widget:focus {
+    border-color: #4CAF50; /* Resalta en verde el foco de los campos */
+}
+
+/* Estilos para las vistas de lista (tree views) */
+.o_list_view .o_data_row {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.o_list_view .o_data_row:hover {
+    background-color: #f5f5f5; /* Hover gris claro */
+}
+
+.o_list_view .o_field_cell {
+    font-size: 14px;
+    padding: 10px;
+}
+
+/* Estilos para el footer */
+.o_form_footer {
+    padding: 10px;
     background-color: #f7f7f7;
-}
-
-/* Estilo para el formulario de agregar cámara */
-.form-camera {
-    background-color: #f8f9fa;
-    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.form-camera input,
-.form-camera select {
-    margin-bottom: 15px;
+/* Estilos para los encabezados de la vista de lista */
+.tree th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-/* Estilo para los iconos dentro del formulario */
-.form-camera .input-icon {
-    margin-right: 10px;
+/* Estilos para los menús y submenús */
+#menu_inventario_root,
+#menu_camaras,
+#menu_dvrs {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 5px;
 }
+
+#menu_inventario_root:hover,
+#menu_camaras:hover,
+#menu_dvrs:hover {
+    background-color: #45a049;
+    cursor: pointer;
+}
+
+/* Fondo general de las vistas */
+.o_list_view, .o_form_view {
+    background-color: #f0f4f7;
+    padding: 20px;
+    border-radius: 10px;
+}
+

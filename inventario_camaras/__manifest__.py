@@ -5,17 +5,17 @@
     'summary': 'Gestión de cámaras de seguridad y su inventario asociado.',
     'author': 'Tu nombre',
     'website': 'http://www.tuwebsite.com',
-    'depends': ['base', 'web'],  # Agregar 'web' para usar assets en vistas
+    'depends': ['base'],
     'data': [
-        'security/ir.model.access.csv',  # Habilitar el archivo de seguridad
-        'views/views.xml',  # Vistas del módulo
-        'views/templates.xml',  # Plantillas adicionales (opcional)
+        'security/ir.model.access.csv',
+        'views/views.xml',
     ],
     'assets': {
         'web.assets_backend': [
-            'inventario_camaras/static/src/css/custom_styles.css',  # Ruta al archivo CSS
+            'inventario_camaras/static/src/css/custom_styles.css'
         ],
     },
+    'icon': '/inventario_camaras/static/description/new_icon.png',  # Ruta al archivo del icono
     'installable': True,
     'application': True,
     'auto_install': False,
