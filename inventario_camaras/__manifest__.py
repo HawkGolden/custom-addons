@@ -15,7 +15,7 @@
             'inventario_camaras/static/src/css/custom_styles.css'
         ],
     },
-    'icon': '/inventario_camaras/static/description/new_icon.png',  # Ruta al archivo del icono
+    'icon': '/inventario_camaras/static/description/new_icon2.png',  # Ruta al archivo del icono
     'installable': True,
     'application': True,
     'auto_install': False,
