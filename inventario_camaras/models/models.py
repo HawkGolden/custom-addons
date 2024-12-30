@@ -6,7 +6,7 @@ class InventarioCamara(models.Model):
     _description = 'Inventario de Cámaras'
 
     name = fields.Char(string="Nombre de la Cámara", required=True)
-    serial = fields.Char(string="Número de Serie", required=True)
+    serial = fields.Char(string="Número de Serie")
     referencia = fields.Char(string="Referencia")
     marca = fields.Char(string="Marca")
     descripcion = fields.Text(string="Observaciones")
@@ -20,4 +20,6 @@ class DVR(models.Model):
 
     name = fields.Char(string="Nombre del DVR", required=True)
     ubicacion = fields.Char(string="Ubicación")
+    referencia = fields.Char(string="Referencia")  # Campo agregado
+    marca = fields.Char(string="Marca")  # Campo agregado
     camaras_ids = fields.One2many('inventario.camara', 'dvr_id', string="Cámaras Conectadas")
