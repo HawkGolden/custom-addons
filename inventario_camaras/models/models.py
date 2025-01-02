@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields
 
+
 class InventarioCamara(models.Model):
     _name = 'inventario.camara'
     _description = 'Inventario de Cámaras'
@@ -13,6 +14,17 @@ class InventarioCamara(models.Model):
     archivos = fields.Binary(string="Archivos Adjuntos")
     archivos_nombre = fields.Char(string="Nombre del Archivo")
     dvr_id = fields.Many2one('inventario.dvr', string="DVR Asociado")
+
+    # Nuevo campo de selección para el estado de la cámara
+    estado = fields.Selection([
+        ('averiada', 'Averiada'),
+        ('activa', 'Activa'),
+        ('inactiva', 'Inactiva'),
+        ('desactivada', 'Desactivada'),
+        ('en_prueba', 'En Prueba')
+    ], string="Estado de la Cámara", default='activa')
+    # Nuevo campo para la fecha de instalación
+    fecha_instalacion = fields.Date(string="Fecha de Instalación")
 
 class DVR(models.Model):
     _name = 'inventario.dvr'
