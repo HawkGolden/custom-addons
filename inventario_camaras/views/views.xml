@@ -27,6 +27,24 @@
                                 <field name="fecha_instalacion"/>
                             </group>
                         </page>
+
+                        <!-- Nueva Sección: Tecnología de Cámaras -->
+                        <page string="Tecnología de Cámaras">
+                            <group>
+                                <field name="tipo_tecnologia"/>
+                                <field name="tipo_lente"/>
+                                <field name="ia_integrada"/>
+                                <field name="tecnologia_color"/>
+                                <field name="tioc"/>
+                                <field name="almacenamiento"/>
+                                <field name="resolucion"/>
+                                <field name="rango_vision_nocturna"/>
+                            </group>
+                            <group>
+                                <field name="observaciones_tecnicas" widget="text"/>
+                            </group>
+                        </page>
+
                         <!-- Nueva sección de Compras -->
                         <page string="Compras">
                             <group>
