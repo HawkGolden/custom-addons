@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- Vistas para Cámaras -->
+    <!-- Vista de Formulario para Cámaras -->
     <record id="view_form_camara" model="ir.ui.view">
         <field name="name">inventario.camara.form</field>
         <field name="model">inventario.camara</field>
@@ -21,6 +21,19 @@
                                 <field name="descripcion" widget="text"/>
                                 <field name="archivos" filename="archivos_nombre"/>
                                 <field name="dvr_id"/>
+                                <!-- Nuevo campo de estado desplegable -->
+                                <field name="estado"/>
+                                <!-- Nuevo campo de fecha de instalación -->
+                                <field name="fecha_instalacion"/>
+                            </group>
+                        </page>
+                        <!-- Nueva sección de Compras -->
+                        <page string="Compras">
+                            <group>
+                                <field name="fecha_compra"/>
+                                <field name="precio_compra"/>
+                                <field name="proveedor_id"/>
+                                <field name="factura_compra"/>
                             </group>
                         </page>
                     </notebook>
