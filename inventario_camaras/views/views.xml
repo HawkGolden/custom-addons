@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<odoo>
     <!-- Vista de Formulario para Cámaras -->
     <record id="view_form_camara" model="ir.ui.view">
         <field name="name">inventario.camara.form</field>
@@ -42,7 +41,6 @@
             </form>
         </field>
     </record>
-</odoo>
 
     <record id="view_tree_camara" model="ir.ui.view">
         <field name="name">inventario.camara.tree</field>
