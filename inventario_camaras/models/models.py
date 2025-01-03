@@ -26,6 +26,14 @@ class InventarioCamara(models.Model):
     # Nuevo campo para la fecha de instalación
     fecha_instalacion = fields.Date(string="Fecha de Instalación")
 
+    # Nueva sección de Compras
+    fecha_compra = fields.Date(string="Fecha de Compra")
+    precio_compra = fields.Monetary(string="Precio de Compra", currency_field='currency_id')
+    proveedor_id = fields.Many2one('res.partner', string="Proveedor")  # Asumiendo que "res.partner" es el modelo de proveedores
+    factura_compra = fields.Binary(string="Factura de Compra")
+    currency_id = fields.Many2one('res.currency', string="Moneda", default=lambda self: self.env.company.currency_id)
+
+
 class DVR(models.Model):
     _name = 'inventario.dvr'
     _description = 'DVR'
