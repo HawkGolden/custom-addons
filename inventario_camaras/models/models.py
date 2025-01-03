@@ -26,6 +26,59 @@ class InventarioCamara(models.Model):
     # Nuevo campo para la fecha de instalación
     fecha_instalacion = fields.Date(string="Fecha de Instalación")
 
+    # --- Nueva Sección: Tecnología de Cámaras ---
+    tipo_tecnologia = fields.Selection([
+        ('analogica', 'Analógica'),
+        ('ip', 'IP'),
+        ('hibrida', 'Híbrida'),
+        ('digital', 'Digital'),
+        ('otra', 'Otra'),
+    ], string="Tipo de Tecnología")
+
+    tipo_lente = fields.Selection([
+        ('2mp', '2MP'),
+        ('fijo', 'Lente Fijo'),
+        ('varifocal', 'Lente Varifocal'),
+        ('motores', 'Lente Motorizado'),
+    ], string="Tipo de Lente")
+
+    ia_integrada = fields.Boolean(string="Cuenta con IA")
+
+    tecnologia_color = fields.Selection([
+        ('estandar', 'Estándar'),
+        ('starlight', 'Starlight'),
+        ('full_color', 'Full Color'),
+    ], string="Tecnología de Color")
+
+    tioc = fields.Boolean(string="TIOC")
+
+    almacenamiento = fields.Selection([
+        ('sin_almacenamiento', 'No tiene'),
+        ('sd_32', 'MicroSD hasta 32GB'),
+        ('sd_64', 'MicroSD hasta 64GB'),
+        ('sd_128', 'MicroSD hasta 128GB'),
+        ('sd_256', 'MicroSD hasta 256GB'),
+    ], string="Almacenamiento Interno")
+
+    resolucion = fields.Selection([
+        ('720p', '720p (HD)'),
+        ('1080p', '1080p (Full HD)'),
+        ('2mp', '2MP'),
+        ('4mp', '4MP'),
+        ('5mp', '5MP'),
+        ('8mp', '8MP (4K)'),
+    ], string="Resolución")
+
+    rango_vision_nocturna = fields.Selection([
+        ('10m', 'Hasta 10m'),
+        ('20m', 'Hasta 20m'),
+        ('30m', 'Hasta 30m'),
+        ('50m', 'Hasta 50m'),
+        ('mas_50m', 'Más de 50m'),
+    ], string="Rango de Visión Nocturna")
+
+    observaciones_tecnicas = fields.Text(string="Observaciones Técnicas")
+
     # Nueva sección de Compras
     fecha_compra = fields.Date(string="Fecha de Compra")
     precio_compra = fields.Monetary(string="Precio de Compra", currency_field='currency_id')
